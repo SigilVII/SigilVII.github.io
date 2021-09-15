@@ -15,7 +15,7 @@
 <div class="col-sm-12" style="margin-top:-400px;">
 <div class="mermaid">
 %%
-%% Start of script 
+%% Start of script
 %% Use %% to comment out a line
 %%
 
@@ -31,148 +31,267 @@ graph LR
 %% Chart start
 %%
 
+subgraph -TheOrder-
+
 A((The Order))
 A == Sith ==> Aravax
-A == Sith ==> Drakus
+%% A == Sith ==> Drakus
 A ==> Ravik
-A == Jedi ===> Skorda
+A == Jedi ==> Skorda
 
 
 Aksoren --> Axel
+
 Alkerion --> Cheshire
-Aravax ----> Unn'Valdr
-Aravax ---> Corgoth
-Aravax ---> Shioni
-Aravax ---> Zaanriyah
+
 Aravax --> Atokad
 Aravax --> Caraj
+Aravax --> Corgoth
+Aravax --> Drakus
 Aravax --> Daragh
 Aravax --> Erodius
 Aravax --> Galik
 Aravax --> Javax
+Aravax --> Kitsune
+Aravax --> Melchoir
 Aravax --> Sham-riku
+Aravax --> Shioni
+Aravax --> Treyus
 Aravax --> Tyrael
+Aravax --> Unn'Valdr
+Aravax --> Zaanriyah
+
 Ashkya --> Mugen
+
 Astaroth --> Nevarra
+
 Au'ran --> Khairyn
+
 Cheshire --> Archangel
+
 Corgoth --> Chuba-Kawl
-Corvinus --> CT-146
-Corvinus --> Vega
+Corgoth --> Varrock
+
 Daelan --> Alkerion
 Daelan --> Duen-Veck
 Daelan --> Infinity
 Daelan --> Rhyme
 Daelan --> Solare
 Daelan --> Tatiana
+
 Delanious --> Fervist
-Deus ---> Inmitis
-Deus ---> Savage
-Deus ---> Shadow
+
 Deus --> Abyssius
 Deus --> Aelynthi
+Deus --> Inmitis
+Deus --> Savage
 Deus --> Seigfried
+Deus --> Shadow
+
 Draeda --> Charm
 Draeda --> Stryder
-Draeda =========> Rancor{{Rancor}}
-Drakus ---> Xion/Nathyra
+
 Drakus --> Jor'ah
 Drakus --> Magnus
+Drakus ---> Xion/Nathyra
+
+Erodius --> Arcania
+
 Fervist --> Lilith
 Fervist --> Xanthius
-Fervist ==> VB{{Virginia Beach}}
-Izen ---> Au'ran
-Izen ---> Daelan
-Izen ---> Kreed
-Izen ---> Lexdaela
-Izen ---> Sigil
+
+
+
+Izen --> Au'ran
 Izen --> Chronica
+Izen --> Daelan
+Izen --> Destrian
 Izen --> Jak
+Izen --> Kreed
 Izen --> Krow
+Izen --> Lexdaela[[Lexdaela]]
+style Lexdaela stroke:#0000ff,stroke-width:2px
 Izen --> Neros
+Izen --> Sigil
+Izen --> Solaris
 Izen --> Xenodan
+
 Jinxtus --> Sasquatch
+%% Jinxtus --Sith--> Snow
+
 Khairyn --> Yathel
+
 Kreed --> Jinxtus
 Kreed --> Ok'Dakie
 Kreed --> Sahale
+
 Lexdaela --> Sephina
+
 Llapuhiz --> Korvath
-Lorek --> Anon
-Lorek --> Sias
-Lorek --> Skagribo-Jlun
-Lucian -----> Izen
-Lucian --> Destrian
+
+
+%% Lucian --> Destrian
+Lucian --> Izen
+Lucian -.-> Xenodan
 Lucian --> Thel-Ehud
-Lucian -.- Xenodan
-Lucian -.Sith.- Corvinus
-Mugen ----> Deus
+
+
+Lucian -.- Corvinus
+subgraph -Corvinus-
+Corvinus --> CT-146
+Corvinus --> Vega
+end
+
+Mugen --> Deus
+
 Nabi --> Nero
 Nabi --> Nexus
-Ok'Dakie --> Lumiex
+
+Ok'Dakie --> Lumiex/Noctis
 Ok'Dakie --> Valerion
+
 Rhyme --> Aksoren
 Rhyme --> Ru'uksha
+
 Savage --> Ethorlek
 Savage --> Nova
-Sayez --> Arbiter
+
+Shadow --> Dravog
 Shadow --> Jaxxis
+
 Shioni --> Derelith
-Sigil ---> Llapuhiz
-Sigil ---> Nabi
+
+Sigil --> Delara
 Sigil --> Leezeran
+Sigil --> Llapuhiz
+Sigil --> Nabi
 Sigil --> Yarne'coatl
+
+Skorda --> Aequitas
 Skorda ---> Lucian
 Skorda --> Ordo
 Skorda --> Serena
+%% Skorda --> Vice
 Skorda --> Xemnas
+
 Thel-Ehud --> Thel-Elioria
+
 Thel-Elioria --> Amorelle
+
+Unn'Valdr --> Epora
 Unn'Valdr --> Tenshioni
 Unn'Valdr --> Vehx
+
+
 Vehx --> Ashkya
 Vehx --> Delanious
+
+%%Vice --> Izen
+
 Wraith --> Gun'thro
+
+Xandrina --> Leafe
+
 Xanthius --> Cambria
-Xion/Nathyra ----> Draeda
-Xion/Nathyra --> Astaroth
+
+Xion/Nathyra --> Astaroth[[Astaroth]]
+style Astaroth stroke:#ff0000,stroke-width:2px
+Xion/Nathyra --> Draeda
 Xion/Nathyra --> Eryth
-Xion/Nathyra --> Jo
+Xion/Nathyra --> Messorum'joea'nimarium
 Xion/Nathyra --> Larka
 Xion/Nathyra --> Morpheus
 Xion/Nathyra --> Nixilus
+
 Yathel --> Risa
 Yathel --> Zerold
 Yathel --> Zodiac
-Yathel ===> LLL{{Lexington Lightsaber League}}
+
 Zaanriyah --> Wraith
 Zaanriyah --> Xandrina
 
-%% ALL
-%% ALL --> ALL-Inmitis
-%% ALL ==> Jensaarai{{Jensaarai}}
+end
 
+%%
+%% Branch Groups
+%% appear below
+%%
+%%
+
+%% Axel ===> Somerset{{Somerset}}
+%% subgraph -Somerset-
+%% Somerset
+%% Somerset --> S-Axel
+%% Somerset --> S-Aksoren
+%% end
+
+Inmitis ====> ALL{{Ashland Lighsaber League}}
+subgraph -ALL-
+%% ALL
+ALL --> ALL-Inmitis
+
+end
+
+subgraph -Jensaarai-
+ALL ===> Jensaarai{{Jensaarai}}
+end
+
+Yathel ====> LLL{{Lexington Lightsaber League}}
+subgraph -LLL-
 %% Lexington Lightsaber League
 %% LLL{{Lexington Lightsaber League}}
 LLL --> LLL-Yathel
+LLL-Yathel --> Auriim
+LLL-Yathel --> Tekkerak
+LLL-Yathel --> Brajer
+LLL-Yathel --> Sor'n
+LLL-Yathel --> Seraph
+LLL-Yathel --> Ash
+end
 
+Draeda ======> Rancor{{Rancor}}
+subgraph -Rancor-
 %% Rancor
 Rancor --Sith--> RN-Draeda
 Rancor --Jedi--> RN-Rhyme
 RN-Draeda --> Abominos
-RN-Draeda ---> Sayez
 RN-Draeda --> Decimatus
 RN-Draeda --> Luctus
 RN-Draeda --> Rheas
-RN-Rhyme ---> Lorek
+RN-Draeda --> Sayez
+RN-Rhyme --> Lorek
 RN-Rhyme --> Orendel
 
+Lorek --> Anon
+Lorek --> Sias
+Lorek --> Skagribo-Jlun
+
+Sayez --> Arbiter
+end
+
+Fervist ======> VB{{Virginia Beach}}
+subgraph -VB-
 %% Virginia Beach
 VB --> VB_Fervist
+end
+
+
+subgraph -The-Academy-
+Skorda ==========> Academy{{Academy}}
+end
+
+subgraph -Legion-
+Skorda ==========> Legion{{Legion}}
+end
+
+%% subgraph -X-
+%% Skorda -........-> X{{X}}
+%% end
 
 %%
 %% DO NOT ADD BELOW THIS LINE
 %%
+
 </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
