@@ -18,7 +18,7 @@
 %% Start of script
 %% Use %% to comment out a line
 %%
-
+%% This is a mess.. I'm sorry.
 %%
 %% Determine direction of chart.
 %% LR - Left to right
@@ -34,120 +34,171 @@ graph LR
 subgraph -TheOrder-
 
 A((The Order))
-A == Sith ==> Aravax
-%% A == Sith ==> Drakus
-A ==> Ravik
-A == Jedi ==> Skorda
+
+
+A == Sith ==> Drakus
+A == Sith ==> Aravax(Aravax)
+style Aravax stroke:#7F4044,stroke-width:2px
+A ===> Ravik
+A == Jedi ==> Skorda(Skorda)
+style Skorda stroke:#40407f,stroke-width:2px
 
 
 Aksoren --> Axel
 
 Alkerion --> Cheshire
 
-Aravax --> Atokad
+Aravax -----> Drakus
+Aravax ---> Atokad
 Aravax --> Caraj
 Aravax --> Corgoth
-Aravax --> Drakus
+Aravax ----> Treyus,Sith
 Aravax --> Daragh
-Aravax --> Erodius
+
 Aravax --> Galik
-Aravax --> Javax
+Aravax ---> Javax
 Aravax --> Kitsune
-Aravax --> Melchoir
+Aravax ---> Melchoir
 Aravax --> Sham-riku
-Aravax --> Shioni
-Aravax --> Treyus
+Aravax ---> Shioni
+
 Aravax --> Tyrael
-Aravax --> Unn'Valdr
 Aravax --> Zaanriyah
+Aravax --> Unn'Valdr
+
+
+Aravax --> ?Technic,Jedi?
+
+Treyus,Sith -."Side Change".- Treyus,Jedi
+Ordo --> Treyus
+Treyus,Sith --> Daragh
 
 Ashkya --> Mugen
 
 Astaroth --> Nevarra
 
-Au'ran --> Khairyn
+%% Au'ran --> Khairyn
 
 Cheshire --> Archangel
 
 Corgoth --> Chuba-Kawl
 Corgoth --> Varrock
 
+Daelan -."Name Change, Sith".- Damocles
 Daelan --> Alkerion
 Daelan --> Duen-Veck
 Daelan --> Infinity
 Daelan --> Rhyme
 Daelan --> Solare
 Daelan --> Tatiana
+Daelan -.-> Zeraph
 
-Delanious --> Fervist
+Zeraph -."Name Change, Sith".- Abyssius,Sith
+
+Delanious --> Fervist(Fervist)
+style Fervist stroke:#7F4044,stroke-width:2px
+
 
 Deus --> Abyssius
 Deus --> Aelynthi
 Deus --> Inmitis
-Deus --> Savage
-Deus --> Seigfried
+Deus --> Savage(Savage)
+style Savage stroke:#7F4044,stroke-width:2px
+
 Deus --> Shadow
+
 
 Draeda --> Charm
 Draeda --> Stryder
+Draeda -.-> Zerold,Sith
+Zerold,Sith -."Side Change".- Zerold,Jedi
+Draeda -."Name Change".- Zaerha
+
 
 Drakus --> Jor'ah
 Drakus --> Magnus
-Drakus ---> Xion/Nathyra
+Drakus --> Xion
 
-Erodius --> Arcania
+%% Erodius --> Arcania
+subgraph -Grey-
+Erodius[/Erodius\]
+style Erodius stroke:#666666,stroke-width:2px
+end
 
 Fervist --> Lilith
 Fervist --> Xanthius
+Fervist -.-> Thairyn
 
-
-
+Au'ran -.-> Khairyn
 Izen --> Au'ran
+
+Izen ----> Khairyn
+
 Izen --> Chronica
-Izen --> Daelan
+Izen ---> Daelan
 Izen --> Destrian
 Izen --> Jak
-Izen --> Kreed
-Izen --> Krow
+Izen ---> Kreed
 Izen --> Lexdaela[[Lexdaela]]
 style Lexdaela stroke:#0000ff,stroke-width:2px
+Izen ---> Marethyu
+Marethyu -."Name Change".- Krow
+Izen --> Krow
 Izen --> Neros
-Izen --> Sigil
+Izen ---> Sigil
 Izen --> Solaris
-Izen --> Xenodan
+Izen ---> Xenodan
 
+
+Jinxtus --> Eldron
+Jinxtus -."Side Change"..- Jinxtus,Sith
+subgraph -Jinxtus,Sith-
+Jinxtus,Sith -.-> Snow
+end
 Jinxtus --> Sasquatch
-%% Jinxtus --Sith--> Snow
+Jinxtus -.-> Sephina
 
-Khairyn --> Yathel
+Khairyn --> Yathel(Yathel)
+style Yathel stroke:#40407f,stroke-width:2px
 
-Kreed --> Jinxtus
-Kreed --> Ok'Dakie
+
+Kreed --> Ok'Dakie(Ok'Dakie)
+style Ok'Dakie stroke:#40407f,stroke-width:2px
 Kreed --> Sahale
+Kreed --> Jinxtus
 
-Lexdaela --> Sephina
+Lexdaela ---> Sephina
 
-Llapuhiz --> Korvath
+Llapuhiz ---> Korvath
 
+Lucian --> Aequitas
 
-%% Lucian --> Destrian
-Lucian --> Izen
-Lucian -.-> Xenodan
-Lucian --> Thel-Ehud
+%% Corvinus <-."Name Change, Jedi".-> Lucian
+Lucian <-."Name Change, Sith".-> Corvinus(Corvinus)
+style Corvinus stroke:#7F4044,stroke-width:2px
 
-
-Lucian -.- Corvinus
 subgraph -Corvinus-
 Corvinus --> CT-146
+
 Corvinus --> Vega
 end
 
-Mugen --> Deus
+Lucian ----> Izen(Izen)
+style Izen stroke:#40407f,stroke-width:2px
+Lucian --> Thel-Ehud
+Lucian -.-> Xenodan
+
+
+
+Mugen ---> Deus(Deus)
+style Deus stroke:#7F4044,stroke-width:2px
+Mugen -."Name Change, Jedi".-> AerynThall(Aeryn Thall)
 
 Nabi --> Nero
 Nabi --> Nexus
 
-Ok'Dakie --> Lumiex/Noctis
+Ok'Dakie --> Lumiex
+Lumiex -."Name Change, Sith".- Noctis
 Ok'Dakie --> Valerion
 
 Rhyme --> Aksoren
@@ -158,35 +209,47 @@ Savage --> Nova
 
 Shadow --> Dravog
 Shadow --> Jaxxis
+Shadow --> Seigfried
 
 Shioni --> Derelith
 
 Sigil --> Delara
+Thairyn(Thairyn Rae) -."Name Change, Jedi".- Leezeran,Jedi
 Sigil --> Leezeran
 Sigil --> Llapuhiz
-Sigil --> Nabi
+Sigil --> Nabi["Dr. Nabi"]
 Sigil --> Yarne'coatl
 
-Skorda --> Aequitas
-Skorda ---> Lucian
+Leezeran -.-> Aetheros
+Aetheros -."Name Change".- Llapuhiz
+
+
+Skorda ----> Erodius
+
 Skorda --> Ordo
 Skorda --> Serena
-%% Skorda --> Vice
+Skorda --> Vice
 Skorda --> Xemnas
+Skorda --> Aequitas
+Skorda ---> Lucian(Lucian)
+style Lucian stroke:#40407f,stroke-width:2px
+
+%% Stryder --> Hassin
+Stryder -..-> Messorum'joea'nimarium
 
 Thel-Ehud --> Thel-Elioria
+%% Thel-Elioria --> Amorelle
 
-Thel-Elioria --> Amorelle
 
 Unn'Valdr --> Epora
 Unn'Valdr --> Tenshioni
 Unn'Valdr --> Vehx
-
+Unn'Valdr -.-> Thairyn
 
 Vehx --> Ashkya
 Vehx --> Delanious
 
-%%Vice --> Izen
+Vice -.-> Izen
 
 Wraith --> Gun'thro
 
@@ -194,14 +257,21 @@ Xandrina --> Leafe
 
 Xanthius --> Cambria
 
-Xion/Nathyra --> Astaroth[[Astaroth]]
+
+Xion -."Name Change".- Nathyra
+
+Nathyra --> Astaroth[[Astaroth]]
 style Astaroth stroke:#ff0000,stroke-width:2px
-Xion/Nathyra --> Draeda
-Xion/Nathyra --> Eryth
-Xion/Nathyra --> Messorum'joea'nimarium
-Xion/Nathyra --> Larka
-Xion/Nathyra --> Morpheus
-Xion/Nathyra --> Nixilus
+Nathyra --> Edalyn
+Nathyra --> Eryth
+Nathyra --> Messorum'joea'nimarium
+
+Xion --> Draeda
+Xion --> Larka
+Xion --> Morpheus
+Xion --> Nixilus
+
+
 
 Yathel --> Risa
 Yathel --> Zerold
@@ -209,6 +279,8 @@ Yathel --> Zodiac
 
 Zaanriyah --> Wraith
 Zaanriyah --> Xandrina
+
+%% Zerold --> Apprentice
 
 end
 
@@ -218,14 +290,20 @@ end
 %%
 %%
 
-%% Axel ===> Somerset{{Somerset}}
-%% subgraph -Somerset-
-%% Somerset
-%% Somerset --> S-Axel
-%% Somerset --> S-Aksoren
-%% end
+subgraph -Krayt-
+Aravax =================> Krayt{{Krayt}}
+Axel ============> Krayt
+Krayt --> K-Aravax
+Krayt --> K-Axel
+end
 
-Inmitis ====> ALL{{Ashland Lighsaber League}}
+Axel -......-> Somerset{{Somerset}}
+subgraph -Somerset-
+Somerset --> S-Axel
+Somerset --> S-Aksoren
+end
+
+Inmitis -.......-> ALL{{Ashland Lighsaber League}}
 subgraph -ALL-
 %% ALL
 ALL --> ALL-Inmitis
@@ -236,40 +314,40 @@ subgraph -Jensaarai-
 ALL ===> Jensaarai{{Jensaarai}}
 end
 
-Yathel ====> LLL{{Lexington Lightsaber League}}
+Yathel ========> LLL{{Lexington Lightsaber League}}
 subgraph -LLL-
-%% Lexington Lightsaber League
-%% LLL{{Lexington Lightsaber League}}
 LLL --> LLL-Yathel
-LLL-Yathel --> Auriim
-LLL-Yathel --> Tekkerak
-LLL-Yathel --> Brajer
-LLL-Yathel --> Sor'n
-LLL-Yathel --> Seraph
 LLL-Yathel --> Ash
+LLL-Yathel ---> Auriim
+LLL-Yathel --> Brajer
+LLL-Yathel ---> Seraph
+LLL-Yathel --> Sor'n
+LLL-Yathel ---> Tekkerak
+
 end
 
-Draeda ======> Rancor{{Rancor}}
+Draeda =========> Rancor{{Rancor}}
 subgraph -Rancor-
 %% Rancor
 Rancor --Sith--> RN-Draeda
 Rancor --Jedi--> RN-Rhyme
-RN-Draeda --> Abominos
+RN-Draeda ---> Abominos
 RN-Draeda --> Decimatus
-RN-Draeda --> Luctus
+RN-Draeda ---> Luctus
 RN-Draeda --> Rheas
-RN-Draeda --> Sayez
+RN-Draeda ---> Sayez
 RN-Rhyme --> Lorek
 RN-Rhyme --> Orendel
 
 Lorek --> Anon
-Lorek --> Sias
+Lorek ---> Sias
 Lorek --> Skagribo-Jlun
+Lorek -."Side Change".- Lorek,Sith
 
 Sayez --> Arbiter
 end
 
-Fervist ======> VB{{Virginia Beach}}
+Fervist ===========> VB{{Virginia Beach}}
 subgraph -VB-
 %% Virginia Beach
 VB --> VB_Fervist
@@ -277,20 +355,27 @@ end
 
 
 subgraph -The-Academy-
-Skorda ==========> Academy{{Academy}}
+Skorda =================> Academy{{Academy}}
 end
 
 subgraph -Legion-
-Skorda ==========> Legion{{Legion}}
+Skorda ==================> Legion{{Legion}}
 end
 
 %% subgraph -X-
 %% Skorda -........-> X{{X}}
 %% end
 
+Academy -.-> Legion
+
+Aravax --> Erodius
+
+
+
 %%
 %% DO NOT ADD BELOW THIS LINE
 %%
+
 
 </div>
 </div>
